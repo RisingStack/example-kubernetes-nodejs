@@ -14,6 +14,14 @@ const server = app.listen(port, (err) => {
   console.log(`Server is listenin on ${port} port`)
 })
 
+app.get('/', (req, res) => {
+  res.json({ service: 'gateway' })
+})
+
+app.get('/healthz', (req, res) => {
+  res.end()
+})
+
 process.on('SIGTERM', () => {
   server.close((err) => {
     console.error(err)
