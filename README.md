@@ -1,4 +1,4 @@
-# example-grpc-services-k8s
+# example-kubernete-nodejs
 
 Intriduction to `Kubernetes` (k8s) with `Node.js`.
 
@@ -12,6 +12,7 @@ Intriduction to `Kubernetes` (k8s) with `Node.js`.
 
 - Re-using local Docker daemon with minikube: `eval $(minikube docker-env)` (run it once before Docker build)
 - On OSX: To base64: `pbpaste | base64 | pbcopy` and From base64: `pbcopy | base64 --decode`
+- `minikube start` and `minikube stop`
 
 ## Tasks
 
@@ -30,9 +31,9 @@ kubectl get deployment
 kubectl get deployment <deployment-name> -o yaml
 kubectl edit deployment <deployment-name>
 kubectl get secret
-kubectl get secret <deployment-name> -o yaml
+kubectl get secret <secret-name> -o yaml
 kubectl get service
-kubectl get service <deployment-name> -o yaml
+kubectl get service <service-name> -o yaml
 ```
 
 ### 3. Get running pods
@@ -41,6 +42,9 @@ kubectl get service <deployment-name> -o yaml
 kubectl get pod
 kubectl describe pod <pod-name>
 ```
+
+Edit replica number in gateway Deployment and get pods again.  
+WARNING: Always edit `yaml` files in Kubernetes via `kubectl`, it's not synchronized with your local `k8s` folder.
 
 ### 4. Kill one pod
 
@@ -86,3 +90,7 @@ ab -n 10000 -c 100 <IP>
 ```
 
 HPA runs every 2 minutes by default.
+
+### 7. Templating
+
+Checkout [Helm](https://github.com/kubernetes/helm) and [anchor](https://github.com/RisingStack/anchor).
