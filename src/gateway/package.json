@@ -1,7 +1,8 @@
 {
-  "name": "example-grpc-services-k8s",
+  "name": "gateway",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Intriduction to Kubernetes with Node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RisingStack/example-grpc-services-k8s.git"
+    "url": "git+https://github.com/RisingStack/example-kubernete-nodejs.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "RisingStack, Inc.",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RisingStack/example-grpc-services-k8s/issues"
+    "url": "https://github.com/RisingStack/example-kubernete-nodejs/issues"
   },
-  "homepage": "https://github.com/RisingStack/example-grpc-services-k8s#readme",
+  "homepage": "https://github.com/RisingStack/example-kubernete-nodejs#readme",
   "devDependencies": {
     "eslint": "3.19.0",
     "eslint-config-airbnb-base": "11.2.0",
