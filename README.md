@@ -18,6 +18,14 @@ Introduction to `Kubernetes` (k8s) with `Node.js`.
 
 ### 1. Build Docker image
 
+Re-using local Docker daemon with minikube:
+
+```sh
+eval $(minikube docker-env)
+```
+
+Building Docker image:
+
 ```sh
 cd src/gateway
 docker build -t my-co/gateway:v1 .
@@ -86,6 +94,7 @@ If no, install it from here: https://github.com/kubernetes/heapster
 ```sh
 kubectl autoscale deployment gateway --cpu-percent=50 --min=1 --max=10
 kubectl get hpa
+kubectl get hpa gateway -o yaml
 ab -n 10000 -c 100 <IP>
 ```
 
