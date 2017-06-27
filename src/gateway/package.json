@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RisingStack/example-kubernete-nodejs.git"
+    "url": "git+https://github.com/RisingStack/example-kubernetes-nodejs.git"
   },
   "author": "RisingStack, Inc.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RisingStack/example-kubernete-nodejs/issues"
+    "url": "https://github.com/RisingStack/example-kubernetes-nodejs/issues"
   },
-  "homepage": "https://github.com/RisingStack/example-kubernete-nodejs#readme",
+  "homepage": "https://github.com/RisingStack/example-kubernetes-nodejs#readme",
   "devDependencies": {
     "eslint": "3.19.0",
     "eslint-config-airbnb-base": "11.2.0",
