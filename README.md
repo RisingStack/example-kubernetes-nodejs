@@ -1,6 +1,6 @@
 # example-kubernete-nodejs
 
-Intriduction to `Kubernetes` (k8s) with `Node.js`.
+Introduction to `Kubernetes` (k8s) with `Node.js`.
 
 ## Requirements
 

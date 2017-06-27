@@ -2,7 +2,7 @@
   "name": "gateway",
   "private": true,
   "version": "1.0.0",
-  "description": "Intriduction to Kubernetes with Node.js",
+  "description": "Introduction to Kubernetes with Node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
