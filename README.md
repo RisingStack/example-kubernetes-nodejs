@@ -89,7 +89,25 @@ Do you have a running Heapster (collects metrics for autoscaler)?
 kubectl get pod -n kube-system
 ```
 
-If no, install it from here: https://github.com/kubernetes/heapster
+If not, enable it:
+
+```sh
+$ minikube addons list
+- addon-manager: enabled
+- dashboard: enabled
+- kube-dns: enabled
+- heapster: disabled
+- registry-creds: disabled
+
+# minikube must be running for these commands to take effect
+$ minikube addons enable heapster
+heapster was successfully enabled
+
+# this may take some time
+$ kubectl get pod -n kube-system
+NAME                          READY     STATUS              RESTARTS   AGE
+heapster-2b7mt                1/1       Running             0          4m
+```
 
 ```sh
 kubectl autoscale deployment gateway --cpu-percent=50 --min=1 --max=10
