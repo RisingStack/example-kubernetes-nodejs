@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Backup of gateway service
+name: gateway
+version: 1.0.0

@@ -1,0 +1,14 @@
+deploymentGateway:
+  image: my-co/gateway
+  imageTag: v1
+  resourcesLimitsCPU: 55m
+  resourcesLimitsMemory: 1536Mi
+  resourcesRequestsCPU: 50m
+  resourcesRequestsMemory: 100Mi
+  replicas: 2
+secretMy:
+  secret: |
+    training
+serviceGateway:
+  type: NodePort
+hpaGateway: {}

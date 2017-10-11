@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 3001
+  selector:
+    app: gateway
+  sessionAffinity: None
+  type: {{ .Values.serviceGateway.type | default "NodePort" }}
