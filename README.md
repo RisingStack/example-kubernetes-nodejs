@@ -121,3 +121,43 @@ HPA runs every 2 minutes by default.
 ### 7. Templating
 
 Checkout [Helm](https://github.com/kubernetes/helm) and [anchor](https://github.com/RisingStack/anchor).
+
+Install helm, then:
+
+```sh
+$ helm init
+Creating /Users/foo/.helm
+Creating /Users/foo/.helm/repository
+Creating /Users/foo/.helm/repository/cache
+Creating /Users/foo/.helm/repository/local
+Creating /Users/foo/.helm/plugins
+Creating /Users/foo/.helm/starters
+Creating /Users/foo/.helm/cache/archive
+Creating /Users/foo/.helm/repository/repositories.yaml
+$HELM_HOME has been configured at /Users/foo/.helm.
+
+# this will take a while
+$ kubectl get pod -n kube-system
+NAME                             READY     STATUS    RESTARTS   AGE
+tiller-deploy-1936853538-3brdf   1/1       Running   0          7m
+```
+
+Backup your infrastructure:
+
+```sh
+node chart.js
+```
+
+Your templates will be saved in `gateway/templates/`
+
+```sh
+helm package gateway
+```
+
+On a fresh cluster run:
+
+```sh
+helm install gateway
+```
+
+and your infrastructure should be restored.

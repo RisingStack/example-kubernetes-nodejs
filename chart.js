@@ -4,7 +4,7 @@ const anchor = require('@risingstack/anchor')
 
 anchor.snapshot({
   overwrite: true,
-  outputPath: './output',
+  outputPath: './gateway',
   name: 'gateway',
   description: 'Backup of gateway service',
   version: '1.0.0',
@@ -12,7 +12,8 @@ anchor.snapshot({
   resources: [
     'deployment/gateway',
     'secret/my',
-    'service/gateway'
+    'service/gateway',
+    'hpa/gateway'
   ]
 })
   .then(() => console.log('Snapshot finished'))
