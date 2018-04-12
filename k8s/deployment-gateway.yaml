@@ -8,6 +8,7 @@ spec:
     metadata:
       labels:
         app: gateway
+        track: black
     spec:
       containers:
       - name: gateway
@@ -38,6 +39,6 @@ spec:
           httpGet:
             path: /healthz
             port: 3001
-          initialDelaySeconds: 3
+          initialDelaySeconds: 1
           failureThreshold: 3
-          periodSeconds: 3
+          periodSeconds: 1
